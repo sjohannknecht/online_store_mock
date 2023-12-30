@@ -6,6 +6,7 @@ module.exports = {
     entry: path.join(__dirname, "src", "main.jsx"),
     output: {
         path: path.resolve(__dirname, "dist"),
+        publicPath: "/",
         filename: "bundle.js"
     },
     resolve: {
@@ -36,4 +37,7 @@ module.exports = {
         }),
         new ESLintPlugin()
     ],
+    devServer: {
+        historyApiFallback: true,
+    }
 }
