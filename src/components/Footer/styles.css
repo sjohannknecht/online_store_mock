@@ -1,0 +1,13 @@
+.Footer {
+    background-color: rosybrown;
+}
+
+.Footer__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.Footer__list-item {
+    padding: 5px 10px;
+}

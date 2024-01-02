@@ -1,0 +1,12 @@
+import {Link} from "react-router-dom";
+import "./styles.css";
+
+function Footer({entries}) {
+    return <footer className="Footer">
+        <ul className="Footer__list">
+            {entries.map(entry => <li  className="Footer__list-item" key={entry.title}><Link to={entry.path}>{entry.title}</Link></li>)}
+        </ul>
+    </footer>
+}
+
+export default Footer;

@@ -1,0 +1,16 @@
+.Navbar {
+    background-color: rosybrown;
+}
+
+.Navbar__list {
+    display: flex;
+    list-style: none;
+}
+
+.Navbar__list-item {
+    padding: 5px 10px;
+}
+
+.Navbar__list-item:first-child {
+    margin-right: auto;
+}
