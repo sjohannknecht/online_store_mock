@@ -8,10 +8,24 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: "GeistRegular";
+    src: url("./assets/fonts/Geist-Regular.woff2") format("woff2");
+}
+
 #root {
+    --max-width: 1400px;
+    --clr-primary: hsl(291, 100%, 15%);
+    --clr-primary-light: hsl(291, 100%, 25%);
+    --clr-secondary: hsl(291, 100%, 40%);
+    --clr-accent: hsl(337, 100%, 31%);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+body {
+    font-family: GeistRegular, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .content-container {

@@ -1,5 +1,6 @@
 .Navbar {
-    background-color: rosybrown;
+    background-color: var(--clr-primary);
+    font-size: 1.3rem;
 }
 
 .Navbar__list {
@@ -9,6 +10,10 @@
 
 .Navbar__list-item {
     padding: 5px 10px;
+}
+
+.Navbar__list-item a {
+    color: white;
 }
 
 .Navbar__list-item:first-child {

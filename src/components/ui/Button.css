@@ -1,0 +1,16 @@
+.Button {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-light);
+}
+
+.Button--primary {
+    background-color: var(--clr-primary);
+    color: white;
+}

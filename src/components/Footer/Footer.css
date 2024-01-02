@@ -1,5 +1,5 @@
 .Footer {
-    background-color: rosybrown;
+    background-color: var(--clr-primary);
 }
 
 .Footer__list {
@@ -10,4 +10,9 @@
 
 .Footer__list-item {
     padding: 5px 10px;
+}
+
+.Footer__list-item a {
+    color: white;
+
 }
