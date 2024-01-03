@@ -1,7 +1,7 @@
 function DataPrivacy() {
     return <>
         <h1>Data Privacy</h1>
-        <p>You're on the Data Privacy page</p>
+        <p>You&apos;re on the Data Privacy page</p>
     </>;
 }
 
