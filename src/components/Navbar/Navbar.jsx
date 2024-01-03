@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function Navbar({entries}) {
     return <nav className="Navbar">
         <ul className="Navbar__list">
-            {entries.map(entry =>
+            {entries?.map(entry =>
                 <li className="Navbar__list-item" key={entry.title}>
                     <Link to={entry.path}>{entry.content}</Link>
                 </li>

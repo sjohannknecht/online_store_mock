@@ -7,7 +7,6 @@ describe("Button", () => {
     test("displays its children.", () => {
         const buttonText = "test";
         render(<Button>{buttonText}</Button>);
-        screen.debug();
         expect(screen.getByText(/test/i)).toBeInTheDocument();
     })
 

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTile renders product image, title and price. 1`] = `
+<div>
+  <div
+    class="tile "
+  >
+    <img
+      alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+      class="Product-tile__image"
+      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    />
+    <h3
+      class="Product-tile__heading"
+    >
+      Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+    </h3>
+    <strong
+      class="Product-tile__price"
+    >
+      109.95
+       $
+    </strong>
+  </div>
+</div>
+`;

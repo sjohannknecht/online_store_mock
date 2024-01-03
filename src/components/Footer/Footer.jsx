@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 function Footer({entries}) {
     return <footer className="Footer">
         <ul className="Footer__list">
-            {entries.map(entry => <li  className="Footer__list-item" key={entry.title}><Link to={entry.path}>{entry.title}</Link></li>)}
+            {entries?.map(entry => <li  className="Footer__list-item" key={entry.title}>
+                <Link to={entry.path}>{entry.title}</Link>
+            </li>)}
         </ul>
     </footer>
 }
