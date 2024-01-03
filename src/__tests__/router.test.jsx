@@ -7,11 +7,11 @@ import {enableFetchMocks} from "jest-fetch-mock";
 
 // Remove loaders before testing to facilitate testing the routes
 routes.forEach((topLevelRoute) => {
-    if (topLevelRoute.hasOwnProperty("loader")) {
+    if (Object.prototype.hasOwnProperty.call(topLevelRoute, "loader")) {
         delete topLevelRoute.loader;
     }
     topLevelRoute.children.forEach((route) => {
-        if (route.hasOwnProperty("loader")) {
+        if (Object.prototype.hasOwnProperty.call(route, "loader")) {
             delete route.loader;
         }
     })
@@ -19,6 +19,7 @@ routes.forEach((topLevelRoute) => {
 // Testing the react router Links did only work after mocking fetch
 enableFetchMocks();
 
+/* eslint-disable react/display-name */
 jest.mock("../pages/Home/Home", () => () => <><h1>Home</h1><p>{"You're on the Home page"}</p></>)
 jest.mock("../pages/Products/Products", () => () => <><h1>Products</h1><p>{"You're on the Products page"}</p></>)
 jest.mock("../pages/Product/Product", () => () => <><h1>Product</h1><p>{"You're on the Product page"}</p></>)
@@ -26,6 +27,7 @@ jest.mock("../pages/Cart/Cart", () => () => <><h1>Cart</h1><p>{"You're on the Ca
 jest.mock("../pages/User/User", () => () => <><h1>User</h1><p>{"You're on the User page"}</p></>)
 jest.mock("../pages/DataPrivacy/DataPrivacy", () => () => <><h1>Data Privacy</h1><p>{"You're on the Data Privacy page"}</p></>)
 jest.mock("../pages/Imprint/Imprint", () => () => <><h1>Imprint</h1><p>{"You're on the Imprint page"}</p></>)
+/* eslint-enable react/display-name */
 
 describe("Router", () => {
 
