@@ -18,7 +18,7 @@ const routes = [
         children: [
             { index: true, element: <Home></Home>, errorElement: <ErrorPage></ErrorPage>},
             { path: "products", element: <Products></Products>, errorElement: <ErrorPage></ErrorPage>},
-            { path: "product", element: <Product></Product>, errorElement: <ErrorPage></ErrorPage>},
+            { path: "products/:id", element: <Product></Product>, errorElement: <ErrorPage></ErrorPage>},
             { path: "cart", element: <Cart></Cart> },
             { path: "user", element: <User></User> },
             { path: "data-privacy", element: <DataPrivacy></DataPrivacy> },

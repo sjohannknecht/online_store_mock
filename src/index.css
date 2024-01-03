@@ -17,7 +17,8 @@
     --max-width: 1400px;
     --clr-primary: hsl(291, 100%, 15%);
     --clr-primary-light: hsl(291, 100%, 25%);
-    --clr-secondary: hsl(291, 100%, 40%);
+    --clr-secondary: hsl(211, 100%, 60%);
+    --clr-secondary-light: hsl(211, 100%, 80%);
     --clr-accent: hsl(337, 100%, 31%);
     display: flex;
     flex-direction: column;
@@ -32,4 +33,8 @@ body {
     flex: auto;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,0 +1,19 @@
+.Products {
+    background-color: var(--clr-secondary);
+}
+
+.Products__heading {
+    color: white;
+}
+
+.Products__grid {
+    --grid-spacing: 15px;
+    display: grid;
+    gap: var(--grid-spacing);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: var(--grid-spacing);
+}
+
+.Products__grid-tile {
+    background-color: white;
+}
