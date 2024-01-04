@@ -1,4 +1,4 @@
-import {render, screen, getByText} from "@testing-library/react";
+import {render, screen, getByText, getByAltText} from "@testing-library/react";
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import {createMemoryRouter, RouterProvider} from "react-router-dom";
@@ -23,20 +23,23 @@ enableFetchMocks();
 jest.mock("../pages/Home/Home", () => () => <><h1>Home</h1><p>{"You're on the Home page"}</p></>)
 jest.mock("../pages/Products/Products", () => () => <><h1>Products</h1><p>{"You're on the Products page"}</p></>)
 jest.mock("../pages/Product/Product", () => () => <><h1>Product</h1><p>{"You're on the Product page"}</p></>)
-jest.mock("../pages/Cart/Cart", () => () => <><h1>Cart</h1><p>{"You're on the Cart page"}</p></>)
+jest.mock("../pages/ShoppingCart/ShoppingCart", () => () => <><h1>Cart</h1><p>{"You're on the Shopping Cart page"}</p></>)
 jest.mock("../pages/User/User", () => () => <><h1>User</h1><p>{"You're on the User page"}</p></>)
 jest.mock("../pages/DataPrivacy/DataPrivacy", () => () => <><h1>Data Privacy</h1><p>{"You're on the Data Privacy page"}</p></>)
 jest.mock("../pages/Imprint/Imprint", () => () => <><h1>Imprint</h1><p>{"You're on the Imprint page"}</p></>)
 /* eslint-enable react/display-name */
 
 describe("Router", () => {
-
     test("renders error page on bad route", () => {
+        const errorSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+        const warnSpy = jest.spyOn(console, "warn").mockImplementation(() => {});
         const router = createMemoryRouter(routes, {
             initialEntries: ["/bad/route"]
         });
         render(<RouterProvider router={router}></RouterProvider>);
-        expect(screen.getByText(/error/i)).toBeInTheDocument()
+        expect(screen.getByText(/error/i)).toBeInTheDocument();
+        errorSpy.mockRestore();
+        warnSpy.mockRestore();
     })
 
     test("renders the home page for the root route", () => {
@@ -63,13 +66,13 @@ describe("Router", () => {
             expect(await screen.findByText(/you're on the products page/i)).toBeInTheDocument()
         })
 
-        test("from Link to /cart to Cart page", async () => {
+        test("from Link to /shopping-cart to ShoppingCart page", async () => {
             const user = userEvent.setup();
             const router = createMemoryRouter(routes);
             render(<RouterProvider router={router}></RouterProvider>);
             const navbarList = document.querySelector(".Navbar__list");
-            await user.click(getByText(navbarList, /Cart/i));
-            expect(await screen.findByText(/you're on the cart page/i)).toBeInTheDocument()
+            await user.click(getByAltText(navbarList, /Shopping Cart Symbol/i));
+            expect(await screen.findByText(/you're on the shopping cart page/i)).toBeInTheDocument()
         })
 
         test("from Link to /user to User page", async () => {

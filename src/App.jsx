@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import {Outlet, useLoaderData} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import ShoppingCartWidget from "./components/ShoppingCartWidget/ShoppingCartWidget";
 
 const NAVBAR_ENTRIES = [
     {
@@ -19,9 +20,9 @@ const NAVBAR_ENTRIES = [
         content: "User"
     },
     {
-        title: "Cart",
-        path: "cart",
-        content: "Cart"
+        title: "ShoppingCart",
+        path: "shopping-cart",
+        content: <ShoppingCartWidget shoppingCart={[1, 3, 4, 5, 6, 6, 6, 5, 3, 3, 3, 4, 5, 4]}></ShoppingCartWidget>
     }
 ]
 
