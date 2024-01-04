@@ -8,11 +8,14 @@
     list-style: none;
 }
 
-.Footer__list-item {
-    padding: 5px 10px;
+.Footer__list-item a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    color: white;
 }
 
-.Footer__list-item a {
-    color: white;
-
+.Footer__list-item:hover {
+    background-color: var(--clr-primary-light);
 }

@@ -8,14 +8,18 @@
     list-style: none;
 }
 
-.Navbar__list-item {
-    padding: 5px 10px;
-}
-
 .Navbar__list-item a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
     color: white;
 }
 
 .Navbar__list-item:first-child {
     margin-right: auto;
+}
+
+.Navbar__list-item:hover {
+    background-color: var(--clr-primary-light);
 }
