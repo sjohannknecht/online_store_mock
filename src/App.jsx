@@ -7,7 +7,7 @@ const NAVBAR_ENTRIES = [
     {
         title: "Home",
         path: "/",
-        content: "home-logo"
+        content: <><span>MOCK</span>store</>,
     },
     {
         title: "Products",

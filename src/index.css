@@ -17,12 +17,21 @@
     --max-width: 1400px;
     --clr-primary: hsl(291, 100%, 15%);
     --clr-primary-light: hsl(291, 100%, 25%);
-    --clr-secondary: hsl(211, 100%, 60%);
-    --clr-secondary-light: hsl(211, 100%, 80%);
+    --clr-secondary: hsl(211, 100%, 50%);
+    --clr-secondary-light: hsl(211, 100%, 70%);
     --clr-accent: hsl(337, 100%, 31%);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--clr-primary);
 }
 
 body {
