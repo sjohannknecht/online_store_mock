@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard renders product image, title, description, category and price and the AddToCartWidget 1`] = `
+<div>
+  <div
+    class="Card ProductCard"
+  >
+    <h1>
+      Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+    </h1>
+    <div
+      class="ProductCard__grid"
+    >
+      <div
+        class="ProductCard__image-wrapper"
+      >
+        <img
+          alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        />
+      </div>
+      <div
+        class="ProductCard__info"
+      >
+        <p
+          class="ProductCard__info--secondary"
+        >
+          men's clothing
+        </p>
+        <p>
+          Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday
+        </p>
+        <span
+          class="ProductCard__info--underlined"
+        >
+          Price: 
+          109.95
+           $
+        </span>
+      </div>
+      <div
+        class="ProductCard__widget-wrapper"
+      >
+        <div>
+          AddToCartWidget
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

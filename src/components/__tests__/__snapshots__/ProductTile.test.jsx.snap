@@ -3,7 +3,7 @@
 exports[`ProductTile renders product image, title and price. 1`] = `
 <div>
   <div
-    class="tile "
+    class="Tile "
   >
     <img
       alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
