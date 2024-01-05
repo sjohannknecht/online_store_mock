@@ -20,6 +20,10 @@
     margin-right: auto;
 }
 
+.Navbar__list-item:first-child span {
+    letter-spacing: -2px;
+}
+
 .Navbar__list-item:hover {
     background-color: var(--clr-primary-light);
 }
