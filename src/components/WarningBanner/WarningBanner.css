@@ -1,0 +1,6 @@
+.warning-banner {
+    padding: 5px;
+    text-align: center;
+    color: var(--clr-accent);
+    background-color: lightgrey;
+}

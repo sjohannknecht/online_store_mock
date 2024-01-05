@@ -6,6 +6,7 @@ import {useReducer} from "react";
 import shoppingCartReducer from "./reducers/shoppingCartReducer";
 import {ShoppingCartContext} from "./context/ShoppingCartContext";
 import shoppingCartFactory from "./services/shoppingCart";
+import WarningBanner from "./components/WarningBanner/WarningBanner";
 
 const NAVBAR_ENTRIES = [
     {
@@ -46,9 +47,12 @@ function App() {
     const [shoppingCart, dispatchShoppingCart] = useReducer(shoppingCartReducer, shoppingCartFactory());
 
     return <>
-        <ShoppingCartContext.Provider value={shoppingCart}>
-            <Navbar entries={NAVBAR_ENTRIES} stateShoppingCart={shoppingCart}></Navbar>
-        </ShoppingCartContext.Provider>
+        <header>
+            <ShoppingCartContext.Provider value={shoppingCart}>
+                <Navbar entries={NAVBAR_ENTRIES} stateShoppingCart={shoppingCart}></Navbar>
+            </ShoppingCartContext.Provider>
+            <WarningBanner message="+++ This website is just a prototype. The items are not real and cannot be purchased! +++"></WarningBanner>
+        </header>
         <main className="content-container">
             <Outlet context={{products, dispatchShoppingCart}}></Outlet>
         </main>
