@@ -3,9 +3,9 @@ import ProductTile from "../../components/ProductTile/ProductTile";
 import "./Products.css"
 
 function Products() {
-    const products = useOutletContext();
+    const {products} = useOutletContext();
 
-    return <div className="Products">
+    return <section className="Products">
         <h1 className="Products__heading">Products</h1>
         <div className="Products__grid">
             {products?.map(product => product
@@ -14,7 +14,7 @@ function Products() {
                 </Link>
                 : null)}
         </div>
-    </div>;
+    </section>;
 }
 
 export default Products;
