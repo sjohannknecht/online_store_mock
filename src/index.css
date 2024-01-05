@@ -44,7 +44,7 @@ body {
 
 .content-container {
     flex: auto;
-    max-width: 1400px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 

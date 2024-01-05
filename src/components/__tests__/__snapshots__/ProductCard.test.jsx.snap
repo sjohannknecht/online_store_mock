@@ -9,7 +9,7 @@ exports[`ProductCard renders product image, title, description, category and pri
       Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
     </h1>
     <div
-      class="ProductCard__grid"
+      class="ProductCard__container"
     >
       <div
         class="ProductCard__image-wrapper"

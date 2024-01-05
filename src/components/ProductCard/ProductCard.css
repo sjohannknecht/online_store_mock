@@ -3,7 +3,7 @@
     padding-bottom: 20px;
 }
 
-.ProductCard__grid {
+.ProductCard__container {
     display: flex;
     gap: 10px;
 }

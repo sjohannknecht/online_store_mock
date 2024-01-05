@@ -6,7 +6,7 @@ import AddToCartWidget from "../AddToCartWidget/AddToCartWidget";
 function ProductCard({product}) {
     return <Card className="ProductCard">
         <h1>{product.title}</h1>
-        <div className="ProductCard__grid">
+        <div className="ProductCard__container">
             <div className="ProductCard__image-wrapper">
                 <img src={product.image} alt={product.title}></img>
             </div>
