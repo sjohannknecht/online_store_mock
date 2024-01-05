@@ -2,7 +2,7 @@ import "./Tile.css"
 import PropTypes from "prop-types";
 
 function Tile({children, className}) {
-    return <div className={["tile", className].join(" ")}>
+    return <div className={["Tile", className].join(" ")}>
         {children}
     </div>
 }
