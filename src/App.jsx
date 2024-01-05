@@ -2,6 +2,10 @@ import Navbar from "./components/Navbar/Navbar";
 import {Outlet, useLoaderData} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import ShoppingCartWidget from "./components/ShoppingCartWidget/ShoppingCartWidget";
+import {useReducer} from "react";
+import shoppingCartReducer from "./reducers/shoppingCartReducer";
+import {ShoppingCartContext} from "./context/ShoppingCartContext";
+import shoppingCartFactory from "./services/shoppingCart";
 
 const NAVBAR_ENTRIES = [
     {
@@ -22,7 +26,7 @@ const NAVBAR_ENTRIES = [
     {
         title: "ShoppingCart",
         path: "shopping-cart",
-        content: <ShoppingCartWidget shoppingCart={[1, 3, 4, 5, 6, 6, 6, 5, 3, 3, 3, 4, 5, 4]}></ShoppingCartWidget>
+        content: <ShoppingCartWidget></ShoppingCartWidget>
     }
 ]
 
@@ -39,11 +43,14 @@ const FOOTER_ENTRIES = [
 
 function App() {
     const products = useLoaderData();
+    const [shoppingCart, dispatchShoppingCart] = useReducer(shoppingCartReducer, shoppingCartFactory());
 
     return <>
-        <Navbar entries={NAVBAR_ENTRIES}></Navbar>
+        <ShoppingCartContext.Provider value={shoppingCart}>
+            <Navbar entries={NAVBAR_ENTRIES} stateShoppingCart={shoppingCart}></Navbar>
+        </ShoppingCartContext.Provider>
         <main className="content-container">
-            <Outlet context={products}></Outlet>
+            <Outlet context={{products, dispatchShoppingCart}}></Outlet>
         </main>
         <Footer entries={FOOTER_ENTRIES}></Footer>
     </>
