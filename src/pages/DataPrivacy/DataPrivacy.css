@@ -1,0 +1,21 @@
+.text-container {
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.text-container h1 {
+    padding-top: 30px;
+    text-decoration: underline var(--clr-primary);
+    text-decoration-thickness: 5px;
+}
+
+.text-container h2, h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.server__list {
+    list-style-position: inside;
+    padding: 10px;
+}
