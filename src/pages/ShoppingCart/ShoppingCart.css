@@ -1,0 +1,24 @@
+.ShoppingCart {
+    margin: 15px 0;
+}
+
+.ShoppingCart__placeholder {
+    margin: 30px 60px;
+}
+
+.ShoppingCart__checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.ShoppingCart__total-price {
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+
+.ShoppingCart__checkout-button {
+    text-align: end;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}

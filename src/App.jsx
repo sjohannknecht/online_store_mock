@@ -20,11 +20,6 @@ const NAVBAR_ENTRIES = [
         content: "Products"
     },
     {
-        title: "User",
-        path: "user",
-        content: "User"
-    },
-    {
         title: "ShoppingCart",
         path: "shopping-cart",
         content: <ShoppingCartWidget></ShoppingCartWidget>
@@ -49,12 +44,12 @@ function App() {
     return <>
         <header>
             <ShoppingCartContext.Provider value={shoppingCart}>
-                <Navbar entries={NAVBAR_ENTRIES} stateShoppingCart={shoppingCart}></Navbar>
+                <Navbar entries={NAVBAR_ENTRIES}></Navbar>
             </ShoppingCartContext.Provider>
-            <WarningBanner message="+++ This website is just a prototype. The items are not real and cannot be purchased! +++"></WarningBanner>
+            <WarningBanner message="+++ This website is a prototype. The items are not real and cannot be purchased! +++"></WarningBanner>
         </header>
         <main className="content-container">
-            <Outlet context={{products, dispatchShoppingCart}}></Outlet>
+            <Outlet context={{products, shoppingCart, dispatchShoppingCart}}></Outlet>
         </main>
         <Footer entries={FOOTER_ENTRIES}></Footer>
     </>
