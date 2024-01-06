@@ -21,3 +21,8 @@
     background-color: var(--clr-secondary);
     color: white;
 }
+
+.Button--accent {
+    background-color: var(--clr-accent);
+    color: white;
+}
