@@ -52,3 +52,9 @@ body {
 a {
     text-decoration: none;
 }
+
+@media (max-width: 1400px) {
+    .content-container {
+        padding: 0 5px;
+    }
+}
