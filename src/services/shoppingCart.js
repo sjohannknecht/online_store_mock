@@ -13,6 +13,14 @@ const shoppingCartProto = {
         return this.items[productId];
     },
 
+    getProductIds() {
+        return Object.keys(this.items);
+    },
+
+    getItems() {
+        return this.items;
+    },
+
     add(productId, quantity) {
         if (Object.prototype.hasOwnProperty.call(this.items, productId.toString())) {
             this.items[productId] += Number(quantity);

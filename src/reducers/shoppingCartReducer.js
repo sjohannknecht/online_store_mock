@@ -6,7 +6,7 @@ function shoppingCartReducer(state, action) {
             return shoppingCartFactory(state).add(action.productId, action.quantity);
         }
         case "increment": {
-            return shoppingCartFactory(state.increment(action.productId));
+            return shoppingCartFactory(state).increment(action.productId);
         }
         case "decrement": {
             return shoppingCartFactory(state).decrement(action.productId);
