@@ -26,3 +26,9 @@
     background-color: var(--clr-accent);
     color: white;
 }
+
+.Button--square {
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    width: 30px;
+}
