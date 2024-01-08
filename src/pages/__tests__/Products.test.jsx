@@ -20,7 +20,7 @@ routes.forEach((topLevelRoute) => {
 // Testing the react router Links did only work after mocking fetch
 enableFetchMocks();
 
-//mock the useOutletContext hook of react-router-dom cause the Projects component gets its data from it
+//mock the useOutletContext hook of react-router-dom because the Products component gets its data from it
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useOutletContext: () => (
