@@ -15,7 +15,7 @@ describe("ShoppingCartItem component", () => {
         expect(screen.getByText(/Your perfect pack for everyday use and walks in the forest. Stash your laptop \(up to 15 inches\) in the padded sleeve, your everyday/i)).toBeInTheDocument();
         expect(screen.getByText(/men's clothing/i)).toBeInTheDocument();
         expect(screen.getByText(/Price: 109.95 \$/i)).toBeInTheDocument();
-        expect(screen.getByText(/Subtotal: 219.9 \$/i)).toBeInTheDocument();
+        expect(screen.getByText(/Subtotal: 219.90 \$/i)).toBeInTheDocument();
     })
 
     test("when clicking the minus-button the decrement-action is dispatched", async () => {

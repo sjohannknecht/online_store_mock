@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./ShoppingCartItem.css";
 
 function ShoppingCartItem({product, quantity, dispatchShoppingCart}) {
+    const subTotal = (product.price * quantity).toFixed(2);
 
     function handleDecrement() {
         dispatchShoppingCart({
@@ -44,7 +45,7 @@ function ShoppingCartItem({product, quantity, dispatchShoppingCart}) {
                 </Button>
             </div>
             <Button onClick={handleRemove} className="Button--accent">Remove from Cart</Button>
-            <p className="ShoppingCartItem__subtotal">Subtotal: {product.price * quantity} $</p>
+            <p className="ShoppingCartItem__subtotal">Subtotal: {subTotal} $</p>
         </div>
     </div>
 }

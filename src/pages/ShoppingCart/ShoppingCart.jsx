@@ -14,7 +14,7 @@ function ShoppingCart() {
         const items = shoppingCart.getItems();
         return Object.keys(items).reduce(
             (accumulator, productId) =>
-                products.find(prod => prod.id.toString() === productId.toString()).price * items[productId] + accumulator, 0);
+                products.find(prod => prod.id.toString() === productId.toString()).price * items[productId] + accumulator, 0).toFixed(2);
     }
 
     function handleCheckout() {
