@@ -1,13 +1,13 @@
 .ShoppingCartWidget {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .ShoppingCartWidget__count {
-    font-size: 1.7rem;
-    padding-left: 10px;
+  font-size: 1.7rem;
+  padding-left: 10px;
 }
 
 .ShoppingCartWidget__image {
-    max-width: 30px;
+  max-width: 30px;
 }

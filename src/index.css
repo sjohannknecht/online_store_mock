@@ -3,26 +3,26 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 @font-face {
-    font-family: "GeistRegular";
-    src: url("./assets/fonts/Geist-Regular.woff2") format("woff2");
+  font-family: "GeistRegular";
+  src: url("./assets/fonts/Geist-Regular.woff2") format("woff2");
 }
 
 #root {
-    --max-width: 1400px;
-    --clr-primary: hsl(291, 100%, 15%);
-    --clr-primary-light: hsl(291, 100%, 25%);
-    --clr-secondary: hsl(211, 100%, 50%);
-    --clr-secondary-light: hsl(211, 100%, 70%);
-    --clr-accent: hsl(337, 100%, 31%);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  --max-width: 1400px;
+  --clr-primary: hsl(291, 100%, 15%);
+  --clr-primary-light: hsl(291, 100%, 25%);
+  --clr-secondary: hsl(211, 100%, 50%);
+  --clr-secondary-light: hsl(211, 100%, 70%);
+  --clr-accent: hsl(337, 100%, 31%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -31,30 +31,31 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--clr-primary);
+  color: var(--clr-primary);
 }
 
 h1 {
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 15px;
 }
 
 body {
-    font-family: GeistRegular, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: GeistRegular, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .content-container {
-    flex: auto;
-    max-width: var(--max-width);
-    margin: 0 auto;
+  flex: auto;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media (max-width: 1400px) {
-    .content-container {
-        padding: 0 5px;
-    }
+  .content-container {
+    padding: 0 5px;
+  }
 }

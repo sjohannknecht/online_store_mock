@@ -1,21 +1,21 @@
 .Footer {
-    background-color: var(--clr-primary);
+  background-color: var(--clr-primary);
 }
 
 .Footer__list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .Footer__list-item a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 10px;
-    color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  color: white;
 }
 
 .Footer__list-item:hover {
-    background-color: var(--clr-primary-light);
+  background-color: var(--clr-primary-light);
 }

@@ -1,41 +1,41 @@
 .ShoppingCartItem__container {
-    display: flex;
-    gap: 50px;
-    padding: 20px;
+  display: flex;
+  gap: 50px;
+  padding: 20px;
 }
 
 .ShoppingCartItem__container:not(:last-child) {
-    border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .ShoppingCartItem__image-wrapper {
-    flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .ShoppingCartItem__image-wrapper img {
-    width: 100%;
+  width: 100%;
 }
 
 .ShoppingCartItem__info-wrapper {
-    flex: 1;
+  flex: 1;
 }
 
 .ShoppingCartItem__info-wrapper > * {
-    margin: 10px;
+  margin: 10px;
 }
 
 .ShoppingCartItem__quantity-changer span {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .ShoppingCartItem__subtotal {
-    text-align: end;
+  text-align: end;
 }
 
 @media (max-width: 600px) {
-    .ShoppingCartItem__container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px 0 0;
-    }
+  .ShoppingCartItem__container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 0;
+  }
 }

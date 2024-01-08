@@ -1,29 +1,29 @@
 .Navbar {
-    background-color: var(--clr-primary);
-    font-size: 1.3rem;
+  background-color: var(--clr-primary);
+  font-size: 1.3rem;
 }
 
 .Navbar__list {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .Navbar__list-item a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 10px;
-    color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  color: white;
 }
 
 .Navbar__list-item:first-child {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .Navbar__list-item:first-child span {
-    letter-spacing: -2px;
+  letter-spacing: -2px;
 }
 
 .Navbar__list-item:hover {
-    background-color: var(--clr-primary-light);
+  background-color: var(--clr-primary-light);
 }

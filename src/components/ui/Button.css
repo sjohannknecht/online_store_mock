@@ -1,34 +1,34 @@
 .Button {
-    padding: 5px 10px;
-    font-size: 1.2rem;
-    border: none;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border: none;
 }
 
 .Button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .Button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .Button--primary {
-    background-color: var(--clr-primary);
-    color: white;
+  background-color: var(--clr-primary);
+  color: white;
 }
 
 .Button--secondary {
-    background-color: var(--clr-secondary);
-    color: white;
+  background-color: var(--clr-secondary);
+  color: white;
 }
 
 .Button--accent {
-    background-color: var(--clr-accent);
-    color: white;
+  background-color: var(--clr-accent);
+  color: white;
 }
 
 .Button--square {
-    padding: 0;
-    aspect-ratio: 1 / 1;
-    width: 30px;
+  padding: 0;
+  aspect-ratio: 1 / 1;
+  width: 30px;
 }

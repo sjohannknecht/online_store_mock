@@ -1,20 +1,31 @@
-import {Link, useOutletContext} from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import ProductTile from "../../components/ProductTile/ProductTile";
-import "./Products.css"
+import "./Products.css";
 
 function Products() {
-    const {products} = useOutletContext();
+  const { products } = useOutletContext();
 
-    return <section className="Products">
-        <h1 className="Products__heading">Products</h1>
-        <div className="Products__grid">
-            {products?.map(product => product
-                ? <Link to={`/products/${product.id}`} className="Products__grid-tile" key={product.id}>
-                    <ProductTile product={product} className="Products__grid-item"></ProductTile>
-                </Link>
-                : null)}
-        </div>
-    </section>;
+  return (
+    <section className="Products">
+      <h1 className="Products__heading">Products</h1>
+      <div className="Products__grid">
+        {products?.map((product) =>
+          product ? (
+            <Link
+              to={`/products/${product.id}`}
+              className="Products__grid-tile"
+              key={product.id}
+            >
+              <ProductTile
+                product={product}
+                className="Products__grid-item"
+              ></ProductTile>
+            </Link>
+          ) : null,
+        )}
+      </div>
+    </section>
+  );
 }
 
 export default Products;

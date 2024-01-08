@@ -1,14 +1,14 @@
 .AddToCartWidget {
-    padding: 10px;
-    background-color: lightgrey;
+  padding: 10px;
+  background-color: lightgrey;
 }
 
 .AddToCartWidget__input {
-    width: 100%;
-    margin: 10px 0;
-    font-size: 1.1rem;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
 .AddToCartWidget__success-message {
-    padding-top: 10px;
+  padding-top: 10px;
 }

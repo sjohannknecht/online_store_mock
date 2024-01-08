@@ -1,51 +1,51 @@
 .ProductCard h1 {
-    text-align: center;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .ProductCard__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .ProductCard__image-wrapper {
-    flex: 0 0 400px;
+  flex: 0 0 400px;
 }
 
 .ProductCard__widget-wrapper {
-    flex: 0 0 200px;
+  flex: 0 0 200px;
 }
 
 .ProductCard__image-wrapper img {
-    width: 100%;
+  width: 100%;
 }
 
 .ProductCard__info {
-    flex: 1 0 300px;
-    padding: 0 30px;
+  flex: 1 0 300px;
+  padding: 0 30px;
 }
 
 .ProductCard__info p {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .ProductCard__info--secondary {
-    color: var(--clr-secondary);
+  color: var(--clr-secondary);
 }
 
 .ProductCard__info--underlined {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: var(--clr-secondary);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--clr-secondary);
 }
 
 @media (max-width: 600px) {
-    .ProductCard__container {
-        flex-direction: column;
-    }
-    .ProductCard__info {
-        flex: 1;
-        padding: 10px;
-    }
+  .ProductCard__container {
+    flex-direction: column;
+  }
+  .ProductCard__info {
+    flex: 1;
+    padding: 10px;
+  }
 }

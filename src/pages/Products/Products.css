@@ -1,20 +1,20 @@
 .Products {
-    margin: 15px 0;
-    background-color: var(--clr-secondary);
+  margin: 15px 0;
+  background-color: var(--clr-secondary);
 }
 
 .Products__heading {
-    color: white;
+  color: white;
 }
 
 .Products__grid {
-    --grid-spacing: 15px;
-    display: grid;
-    gap: var(--grid-spacing);
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: var(--grid-spacing);
+  --grid-spacing: 15px;
+  display: grid;
+  gap: var(--grid-spacing);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: var(--grid-spacing);
 }
 
 .Products__grid-tile {
-    background-color: white;
+  background-color: white;
 }
