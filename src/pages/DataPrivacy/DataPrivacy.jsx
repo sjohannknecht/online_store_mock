@@ -46,6 +46,7 @@ function DataPrivacy() {
           href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
           target="_blank"
           rel="noopener noreferrer"
+          className="DataPrivacy__link"
         >
           https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
         </a>
@@ -85,7 +86,7 @@ function DataPrivacy() {
         automatisch Informationen, die Ihr Browser automatisch an uns
         übermittelt. Dies sind:
       </p>
-      <ul className="DataPrivacy__server-list">
+      <ul className="DataPrivacy__server--list">
         <li>Besuchte Seite auf unserer Domain</li>
         <li>Datum und Uhrzeit der Serveranfrage</li>
         <li>Browsertyp und Browserversion</li>
