@@ -46,6 +46,7 @@ function DataPrivacy() {
           href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
           target="_blank"
           rel="noopener noreferrer"
+          className="DataPrivacy__link"
         >
           https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
         </a>
