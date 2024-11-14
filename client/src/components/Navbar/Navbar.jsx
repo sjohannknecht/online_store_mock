@@ -7,7 +7,7 @@ function Navbar({ entries }) {
     <nav className="Navbar">
       <ul className="Navbar__list">
         {entries?.map((entry) => (
-          <li className="Navbar__list-item" key={entry.title}>
+          <li className="Navbar__list-item" key={entry.path}>
             <Link to={entry.path}>{entry.content}</Link>
           </li>
         ))}
@@ -19,7 +19,6 @@ function Navbar({ entries }) {
 Navbar.propTypes = {
   entries: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
       path: PropTypes.string,
       content: PropTypes.node,
     }),

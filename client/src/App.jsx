@@ -19,12 +19,14 @@ const NAVBAR_ENTRIES = [
     ),
   },
   {
-    title: "Products",
     path: "products",
     content: "Products",
   },
   {
-    title: "ShoppingCart",
+    path: "user",
+    content: "User",
+  },
+  {
     path: "shopping-cart",
     content: <ShoppingCartWidget></ShoppingCartWidget>,
   },
