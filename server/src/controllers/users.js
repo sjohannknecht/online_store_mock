@@ -19,7 +19,7 @@ router.get("/:id", middleware.userExtractor, async (req, res) => {
 
 router.post("/", async (req, res, next) => {
   const { username, name, password } = req.body;
-  // TODO: validate that username and password are not null
+  // TODO: validate that username is not null
   const saltRounds = 10;
   try {
     if (typeof password !== "string") {
