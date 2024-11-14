@@ -10,7 +10,7 @@ beforeEach(async () => {
 });
 
 describe("getting users", () => {
-  test("getting users succeeds with status code 200 when authenticated", async () => {
+  test("succeeds with status code 200 when authenticated", async () => {
     const response = await api
       .post("/api/login")
       .send({ username: "test_username", password: "test_password" });
@@ -27,7 +27,7 @@ describe("getting users", () => {
       });
   });
 
-  test("getting users fails with status code 401 when not authenticated", async () => {
+  test("fails with status code 401 when not authenticated", async () => {
     await api
       .get("/api/users")
       .expect(401)
@@ -41,7 +41,7 @@ describe("getting users", () => {
 });
 
 describe("creating users", () => {
-  test("creation succeeds with a fresh username", async () => {
+  test("succeeds with a fresh username", async () => {
     const usersAtStart = await getUsers();
     const newUser = {
       username: "test_new_username",
@@ -62,7 +62,7 @@ describe("creating users", () => {
     expect(usernames).toContain(newUser.username);
   });
 
-  test("creation fails with proper statuscode and message if username already taken", async () => {
+  test("fails with proper statuscode and message if username already taken", async () => {
     const usersAtStart = await getUsers();
 
     const newUser = {
@@ -83,7 +83,7 @@ describe("creating users", () => {
     expect(usersAtEnd.length).toBe(usersAtStart.length);
   });
 
-  test("creation fails with proper statuscode and message if username is missing", async () => {
+  test("fails with proper statuscode and message if username is missing", async () => {
     const usersAtStart = await getUsers();
 
     const newUser = {
@@ -107,7 +107,7 @@ describe("creating users", () => {
     expect(usersAtEnd.length).toBe(usersAtStart.length);
   });
 
-  test("creation fails with proper statuscode and message if name is missing", async () => {
+  test("fails with proper statuscode and message if name is missing", async () => {
     const usersAtStart = await getUsers();
 
     const newUser = {
@@ -129,7 +129,7 @@ describe("creating users", () => {
     expect(usersAtEnd.length).toBe(usersAtStart.length);
   });
 
-  test("creation fails with proper statuscode and message if password is missing", async () => {
+  test("fails with proper statuscode and message if password is missing", async () => {
     const usersAtStart = await getUsers();
     const newUser = {
       username: "test_new_username",
@@ -148,7 +148,7 @@ describe("creating users", () => {
     expect(usersAtEnd.length).toBe(usersAtStart.length);
   });
 
-  test("creation fails with proper statuscode and message if password is shorter than 3", async () => {
+  test("fails with proper statuscode and message if password is shorter than 3", async () => {
     const usersAtStart = await getUsers();
 
     const newUser = {
