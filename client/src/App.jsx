@@ -7,6 +7,8 @@ import shoppingCartReducer from "./reducers/shoppingCartReducer";
 import { ShoppingCartContext } from "./context/ShoppingCartContext";
 import shoppingCartFactory from "./services/shoppingCart";
 import WarningBanner from "./components/WarningBanner/WarningBanner";
+import UserNavBarElement from "./components/UserNavBarElement/UserNavBarElement";
+import useUser from "./hooks/useUser";
 
 const NAVBAR_ENTRIES = [
   {
@@ -23,12 +25,12 @@ const NAVBAR_ENTRIES = [
     content: "Products",
   },
   {
-    path: "user",
-    content: "User",
-  },
-  {
     path: "shopping-cart",
     content: <ShoppingCartWidget></ShoppingCartWidget>,
+  },
+  {
+    path: "login",
+    content: <UserNavBarElement></UserNavBarElement>,
   },
 ];
 
@@ -45,6 +47,8 @@ const FOOTER_ENTRIES = [
 
 function App() {
   const products = useLoaderData();
+
+  const { user, setUser } = useUser();
   const [shoppingCart, dispatchShoppingCart] = useReducer(
     shoppingCartReducer,
     shoppingCartFactory(),
@@ -60,7 +64,13 @@ function App() {
       </header>
       <main className="content-container">
         <Outlet
-          context={{ products, shoppingCart, dispatchShoppingCart }}
+          context={{
+            user,
+            setUser,
+            products,
+            shoppingCart,
+            dispatchShoppingCart,
+          }}
         ></Outlet>
       </main>
       <Footer entries={FOOTER_ENTRIES}></Footer>
