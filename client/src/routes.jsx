@@ -9,6 +9,7 @@ import User from "./pages/User/User";
 import DataPrivacy from "./pages/DataPrivacy/DataPrivacy";
 import Imprint from "./pages/Imprint/Imprint";
 import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 
 const routes = [
   {
@@ -21,8 +22,9 @@ const routes = [
       { path: "products", element: <Products></Products> },
       { path: "products/:id", element: <Product></Product> },
       { path: "shopping-cart", element: <ShoppingCart></ShoppingCart> },
-      { path: "user", element: <User></User> },
+      { path: "users", element: <User></User> },
       { path: "login", element: <Login></Login> },
+      { path: "signup", element: <SignUp></SignUp> },
       { path: "data-privacy", element: <DataPrivacy></DataPrivacy> },
       { path: "imprint", element: <Imprint></Imprint> },
     ],

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { login } from "../../services/api/login";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
@@ -16,7 +16,7 @@ function Login() {
     try {
       const user = await login(username, password);
       setUser(user);
-      navigate("/user");
+      navigate("/users");
     } catch (err) {
       setErrorMessage(err);
     }
@@ -46,6 +46,7 @@ function Login() {
         </button>
       </form>
       <div className="Login__error-message">{errorMessage}</div>
+      <Link to="/signup">Not signed up yet? Click here</Link>
     </>
   );
 }
