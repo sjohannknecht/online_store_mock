@@ -1,15 +1,10 @@
+import { fetchWrapper } from "./util/fetchWrapper";
+
 async function login(username, password) {
-  const response = await fetch("http://localhost:3001/api/login", {
-    method: "POST",
-    body: JSON.stringify({ username, password }),
-    headers: {
-      "Content-Type": "application/json",
-    },
+  return fetchWrapper.post("http://localhost:3001/api/login", {
+    username,
+    password,
   });
-  if (!response.ok) {
-    throw new Error("Network response was not OK.");
-  }
-  return await response.json();
 }
 
 export { login };

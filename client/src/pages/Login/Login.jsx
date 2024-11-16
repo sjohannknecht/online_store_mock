@@ -1,27 +1,31 @@
 import { useState } from "react";
 import { login } from "../../services/api/login";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState();
 
   const { setUser } = useOutletContext();
 
   const navigate = useNavigate();
 
   async function handleLogin() {
-    const user = await login(username, password);
-    console.log(user);
-    console.log(setUser);
-    setUser(user);
-    navigate("/user");
+    try {
+      const user = await login(username, password);
+      setUser(user);
+      navigate("/user");
+    } catch (err) {
+      setErrorMessage(err);
+    }
   }
   return (
     <>
       <h1>Login </h1>
       <form id="login-form">
-        <label htmlFor="username">Benutzername:</label>
+        <label htmlFor="username">Username:</label>
         <input
           type="text"
           id="username-input"
@@ -29,7 +33,7 @@ function Login() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         ></input>
-        <label htmlFor="password">Passwort:</label>
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password-input"
@@ -38,9 +42,10 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button type="button" onClick={handleLogin}>
-          Anmelden
+          Login
         </button>
       </form>
+      <div className="Login__error-message">{errorMessage}</div>
     </>
   );
 }
