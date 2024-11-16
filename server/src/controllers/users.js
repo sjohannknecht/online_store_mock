@@ -18,7 +18,7 @@ router.get("/:id", middleware.userExtractor, async (req, res) => {
 });
 
 router.post("/", async (req, res, next) => {
-  const { username, name, password } = req.body;
+  const { username, password } = req.body;
   // TODO: validate that username is not null
   const saltRounds = 10;
   try {
@@ -32,7 +32,6 @@ router.post("/", async (req, res, next) => {
 
     const user = await User.create({
       username,
-      name,
       passwordHash,
     });
 

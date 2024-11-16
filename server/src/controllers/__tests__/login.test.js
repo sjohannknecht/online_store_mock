@@ -1,6 +1,6 @@
 const supertest = require("supertest");
 const app = require("../../app");
-const { getUsers, seedUsers, destroyUsers } = require("../../db/util/users");
+const { seedUsers, destroyUsers } = require("../../db/util/users");
 
 const api = supertest(app);
 
@@ -17,7 +17,6 @@ describe("logging in", () => {
       .expect(200)
       .expect("Content-Type", /application\/json/);
     expect(response.body.username).toBe("test_username");
-    expect(response.body.name).toBe("test_name");
     expect(response.body).toHaveProperty("token");
   });
 

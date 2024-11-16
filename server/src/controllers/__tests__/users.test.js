@@ -45,7 +45,6 @@ describe("creating users", () => {
     const usersAtStart = await getUsers();
     const newUser = {
       username: "test_new_username",
-      name: "test_new_name",
       password: "test_password",
     };
 
@@ -67,7 +66,6 @@ describe("creating users", () => {
 
     const newUser = {
       username: "test_username",
-      name: "test_new_name",
       password: "test_password",
     };
 
@@ -87,7 +85,6 @@ describe("creating users", () => {
     const usersAtStart = await getUsers();
 
     const newUser = {
-      name: "test_new_name",
       password: "test_password",
     };
 
@@ -107,33 +104,10 @@ describe("creating users", () => {
     expect(usersAtEnd.length).toBe(usersAtStart.length);
   });
 
-  test("fails with proper statuscode and message if name is missing", async () => {
-    const usersAtStart = await getUsers();
-
-    const newUser = {
-      username: "test_new_username",
-      password: "test_password",
-    };
-
-    const result = await api
-      .post("/api/users")
-      .send(newUser)
-      .expect(400)
-      .expect("Content-Type", /application\/json/);
-
-    const usersAtEnd = await getUsers();
-
-    expect(
-      result.body.error.includes("notNull Violation: user.name cannot be null"),
-    ).toBe(true);
-    expect(usersAtEnd.length).toBe(usersAtStart.length);
-  });
-
   test("fails with proper statuscode and message if password is missing", async () => {
     const usersAtStart = await getUsers();
     const newUser = {
       username: "test_new_username",
-      name: "test_new_name",
     };
 
     const result = await api
@@ -153,7 +127,6 @@ describe("creating users", () => {
 
     const newUser = {
       username: "test_new_username",
-      name: "test_new_name",
       password: "ab",
     };
 

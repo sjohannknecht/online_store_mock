@@ -12,7 +12,6 @@ const seedUsers = async () => {
   await sequelize.getQueryInterface().bulkInsert("users", [
     {
       username: "test_username",
-      name: "test_name",
       created_at: new Date(),
       updated_at: new Date(),
       password_hash: passwordHash,

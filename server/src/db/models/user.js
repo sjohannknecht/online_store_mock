@@ -12,13 +12,10 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     username: {
       type: DataTypes.STRING,
       unique: true,
-      allowNull: false,
-    },
-    name: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
     passwordHash: {
